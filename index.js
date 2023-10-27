@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
+require("dotenv").config();
+console.log(process.env.MONGODB);
 
 // connect to mongodb
 mongoose.connect("mongodb://127.0.0.1:27017/messagesApi");
