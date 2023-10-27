@@ -6,7 +6,8 @@ require("dotenv").config();
 console.log(process.env.MONGODB);
 
 // connect to mongodb
-mongoose.connect("mongodb://127.0.0.1:27017/messagesApi");
+//mongoose.connect("mongodb://127.0.0.1:27017/messagesApi"); lokaal
+mongoose.connect(process.env.MONGODB);
 
 // check if connection works
 const db = mongoose.connection;
