@@ -5,6 +5,9 @@ const port = 3000;
 require("dotenv").config();
 console.log(process.env.MONGODB);
 
+const cors = require("cors");
+app.use(cors());
+
 // connect to mongodb
 //mongoose.connect("mongodb://127.0.0.1:27017/messagesApi"); lokaal
 mongoose.connect(process.env.MONGODB);
